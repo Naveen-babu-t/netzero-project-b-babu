@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Requests</title>
+  <title>My Requests - Dan Vokey's Plumbing Services</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>My Service Requests</h2>
-    <p>User: <strong><%= user.username %></strong></p>
+  <div class="page">
+    <div class="container">
+      <div class="topbar">
+        <h2>My Service Requests</h2>
+        <div class="user-badge"><%= user.username %></div>
+      </div>
 
-    <% if (requests.length === 0) { %>
-      <p>No requests submitted yet.</p>
-    <% } else { %>
-      <% requests.forEach(function(request) { %>
-        <div class="card">
-          <h3><%= request.service_type %></h3>
-          <p><%= request.description %></p>
-          <p><strong>Created:</strong> <%= request.created_at %></p>
+      <div class="info-card">
+        <p class="subtitle">
+          Below is a list of your submitted plumbing service and quote requests.
+        </p>
+
+        <% if (requests.length === 0) { %>
+          <p>No requests submitted yet.</p>
+        <% } else { %>
+          <% requests.forEach(function(request) { %>
+            <div class="card">
+              <h3><%= request.service_type %></h3>
+              <p><strong>Description:</strong> <%= request.description %></p>
+              <p class="meta"><strong>Submitted:</strong> <%= request.created_at %></p>
+            </div>
+          <% }) %>
+        <% } %>
+
+        <div class="button-row">
+          <a class="btn btn-primary" href="/dashboard">Back to Dashboard</a>
+          <a class="btn btn-danger" href="/logout">Logout</a>
         </div>
-      <% }) %>
-    <% } %>
-
-    <a href="/dashboard">Back to Dashboard</a>
-    <a href="/logout">Logout</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>

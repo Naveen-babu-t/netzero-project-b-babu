@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Login - Dan Vokey's Plumbing Services</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Login</h2>
+  <div class="page">
+    <div class="container">
+      <div class="topbar">
+        <h2>Customer Login</h2>
+      </div>
 
-    <% if (error) { %>
-      <div class="error"><%= error %></div>
-    <% } %>
+      <div class="form-card">
+        <p class="subtitle">
+          Log in to submit new requests and review your previous plumbing service inquiries.
+        </p>
 
-    <form method="POST" action="/login">
-      <label>Username</label>
-      <input type="text" name="username" required>
+        <% if (error) { %>
+          <div class="error"><%= error %></div>
+        <% } %>
 
-      <label>Password</label>
-      <input type="password" name="password" required>
+        <form method="POST" action="/login">
+          <label>Username</label>
+          <input type="text" name="username" required>
 
-      <button type="submit">Login</button>
-    </form>
+          <label>Password</label>
+          <input type="password" name="password" required>
 
-    <a href="/">Back Home</a>
-    <a href="/register">Create account</a>
+          <div class="button-row">
+            <button class="btn btn-primary" type="submit">Login</button>
+            <a class="btn btn-secondary" href="/">Back Home</a>
+            <a class="btn btn-secondary" href="/register">Create account</a>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </body>
 </html>

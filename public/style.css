@@ -1,55 +1,225 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-}
-
-.container {
-  width: 90%;
-  max-width: 800px;
-  margin: 40px auto;
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-}
-
-h1, h2 {
-  margin-top: 0;
-}
-
-a, button {
-  display: inline-block;
-  margin: 8px 8px 8px 0;
-  padding: 10px 16px;
-  text-decoration: none;
-  border: none;
-  background: #0078d7;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-a:hover, button:hover {
-  background: #005ea8;
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0 16px 0;
+* {
   box-sizing: border-box;
 }
 
-.card {
-  background: #fafafa;
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f4f7fb, #eaf1f8);
+  color: #1f2937;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero {
+  background: linear-gradient(135deg, #0f4c81, #1d6fa5);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(15, 76, 129, 0.25);
+}
+
+.hero h1 {
+  margin: 0 0 12px 0;
+  font-size: 2rem;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.section-title {
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+  color: #0f4c81;
+}
+
+.subtitle {
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.form-card,
+.info-card {
+  background: #f9fbfd;
+  border: 1px solid #dbe6f0;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  background: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #1d6fa5;
+  box-shadow: 0 0 0 3px rgba(29, 111, 165, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn,
+a.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover,
+a.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.btn-primary {
+  background: #0f4c81;
+  color: white;
+  box-shadow: 0 6px 16px rgba(15, 76, 129, 0.2);
+}
+
+.btn-secondary {
+  background: #e5eef6;
+  color: #0f4c81;
+}
+
+.btn-danger {
+  background: #b91c1c;
+  color: white;
 }
 
 .error {
-  color: red;
-  margin-bottom: 15px;
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.success {
+  background: #ecfdf5;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.topbar h2 {
+  margin: 0;
+  color: #0f4c81;
+}
+
+.user-badge {
+  background: #eaf3fb;
+  color: #0f4c81;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dbe6f0;
+  border-left: 6px solid #0f4c81;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #0f4c81;
+}
+
+.card p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.meta {
+  font-size: 0.92rem;
+  color: #6b7280;
+}
+
+.footer-note {
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 24px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
 }

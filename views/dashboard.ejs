@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dashboard</title>
+  <title>Dashboard - Dan Vokey's Plumbing Services</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Dashboard</h2>
-    <p>Welcome, <strong><%= user.username %></strong></p>
+  <div class="page">
+    <div class="container">
+      <div class="topbar">
+        <h2>Customer Dashboard</h2>
+        <div class="user-badge">Welcome, <%= user.username %></div>
+      </div>
 
-    <h3>Submit a Service Request</h3>
+      <div class="form-card">
+        <h3 class="section-title">Submit a Service Request</h3>
+        <p class="subtitle">
+          Please provide the service type and a brief explanation of the plumbing issue or quote request.
+        </p>
 
-    <form method="POST" action="/requests">
-      <label>Service Type</label>
-      <select name="service_type" required>
-        <option value="">Select a service</option>
-        <option value="Leak Repair">Computer Repair</option>
-        <option value="Drain cleaning">Home Security Setup</option>
-        <option value="Emergency Plumbing">Tutoring</option>
-        <option value="Quote Request">AV Installation</option>
-      </select>
+        <form method="POST" action="/requests">
+          <label>Service Type</label>
+          <select name="service_type" required>
+            <option value="">Select a service</option>
+            <option value="Leak Repair">Leak Repair</option>
+            <option value="Drain Cleaning">Drain Cleaning</option>
+            <option value="Pipe Installation">Pipe Installation</option>
+            <option value="Emergency Plumbing">Emergency Plumbing</option>
+            <option value="Quote Request">Quote Request</option>
+          </select>
 
-      <label>Description</label>
-      <textarea name="description" rows="5" required></textarea>
+          <label>Description</label>
+          <textarea name="description" rows="5" required></textarea>
 
-      <button type="submit">Submit Request</button>
-    </form>
-
-    <a href="/my-requests">View My Requests</a>
-    <a href="/logout">Logout</a>
+          <div class="button-row">
+            <button class="btn btn-primary" type="submit">Submit Request</button>
+            <a class="btn btn-secondary" href="/my-requests">View My Requests</a>
+            <a class="btn btn-danger" href="/logout">Logout</a>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </body>
 </html>
