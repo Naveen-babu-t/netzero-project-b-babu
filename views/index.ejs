@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PC Plus Service App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PC Plus Service Request App</h1>
+    <p>This app lets customers register, log in, and submit service requests.</p>
+
+    <% if (user) { %>
+      <p>Welcome, <strong><%= user.username %></strong></p>
+      <a href="/dashboard">Go to Dashboard</a>
+      <a href="/my-requests">My Requests</a>
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/register">Register</a>
+      <a href="/login">Login</a>
+    <% } %>
+  </div>
+</body>
+</html>

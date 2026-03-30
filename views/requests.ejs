@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Requests</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>My Service Requests</h2>
+    <p>User: <strong><%= user.username %></strong></p>
+
+    <% if (requests.length === 0) { %>
+      <p>No requests submitted yet.</p>
+    <% } else { %>
+      <% requests.forEach(function(request) { %>
+        <div class="card">
+          <h3><%= request.service_type %></h3>
+          <p><%= request.description %></p>
+          <p><strong>Created:</strong> <%= request.created_at %></p>
+        </div>
+      <% }) %>
+    <% } %>
+
+    <a href="/dashboard">Back to Dashboard</a>
+    <a href="/logout">Logout</a>
+  </div>
+</body>
+</html>

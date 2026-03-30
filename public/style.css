@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+a, button {
+  display: inline-block;
+  margin: 8px 8px 8px 0;
+  padding: 10px 16px;
+  text-decoration: none;
+  border: none;
+  background: #0078d7;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+a:hover, button:hover {
+  background: #005ea8;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 16px 0;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 15px;
+}
