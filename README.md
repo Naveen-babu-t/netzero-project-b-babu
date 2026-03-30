@@ -1,7 +1,7 @@
-# Project B - PC Plus Service Request App
+# Project B - Dan Vokey's Plumbing Services
 
 ## Project Description
-This is a full-stack web application built for a local business called PC Plus. The app allows users to register, log in, and submit service requests. The requests are stored in a MySQL database.
+This is a full-stack web application built for Dan Vokey’s Plumbing Services in Kingston, Ontario. The app allows customers to register, log in, and submit plumbing service requests or quote requests. The requests are stored in a MySQL database.
 
 ## Tech Stack
 - Node.js
